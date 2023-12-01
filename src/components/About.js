@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import TabButton from "./TabButton";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
 
 const TAB_DATA = [
   {
@@ -56,18 +58,39 @@ const About = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <div
+        <motion.div
+        variants={fadeIn("right", 0.3)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.3 }}
           className="flex-1 bg-about bg-contain bg-no-repeat h-[640px] 
-       bg-top w-full  object-cover rounded-lg"
-        ></div>
+       bg-top w-full mix-blend-lighten"
+        ></motion.div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
+          <motion.h2 
+          variants={fadeIn("left", 0.4)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="text-[40px] font-tertiary text-gradient mb-2">
+            About Me
+          </motion.h2>
+          <motion.p 
+          variants={fadeIn("left", 0.5)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="text-base lg:text-lg">
             {
-              "I am a front end web developer with a passion for creating interactive and responsive web applications. I have experience working with .NET and C sharp for building web application, JavaScript and Bootstrap, HTML, CSS, and Git. I am a quick learner and I am always looking to expand my knowledge and skill set as a matter of facts this portfolio was created on Nextjs and TailwindCSS also I'm building online shop using Shopify which currently i already publish and being use at the very moment. I am a team player and I am excited to work with others to create amazing applications. "
+              "I am a front end web developer with a passion for creating interactive and responsive web applications. I have experience working with .NET and C sharp for building web application, JavaScript and Bootstrap, HTML, CSS, and Git. I am a quick learner and I am always looking to expand my knowledge and skill set as a matter of facts this portfolio was created on Reactjs and TailwindCSS also I'm building online shop using Shopify which currently i already publish and being use at the very moment. I am a team player and I am excited to work with others to create amazing applications. "
             }
-          </p>
-          <div className="flex flex-row justify-start mt-8">
+          </motion.p>
+          <motion.div 
+          variants={fadeIn("left", 0.6)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="flex flex-row justify-start font-tertiary text-gradient mb-2 mt-8">
             {TAB_DATA.map((tabItem) => (
               <TabButton
                 key={tabItem.id}
@@ -77,10 +100,15 @@ const About = () => {
                 {tabItem.title}
               </TabButton>
             ))}
-          </div>
-          <div className="mt-8">
+          </motion.div>
+          <motion.div
+          variants={fadeIn("left", 0.6)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }} 
+          className="mt-8">
             {TAB_DATA.find((t) => t.id === tab).content}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
