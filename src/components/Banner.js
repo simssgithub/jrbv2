@@ -64,8 +64,8 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
             >
-              <button className="px-1 py-1 w-full sm:w-fit rounded-full btn btn-lg mt-3">
-                <span className="btn btn-lg">
+              <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-indigo-800 via-blue-500 to-teal-100 hover:bg-slate-500 text-white mt-3">
+                <span className="block bg-indigo-800 hover:bg-teal-500 rounded-full px-5 py-2">
                   Hire me
                 </span>
               </button>
