@@ -5,7 +5,7 @@ const Header = () => {
     <div className='container mx-auto'>
       <div className='flex justify-between items-center'>
         
-        <a href='#'>
+        <a href='http://www.google.com'>
           <img src={Logo} alt=''/>
         </a>
         <button className='btn btn-sm'>Work with me</button>
