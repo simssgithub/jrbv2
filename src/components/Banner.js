@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "../assets/mypic.png";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
@@ -29,21 +27,21 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-6 text-[36px] lg:text-[60px] font-secondary 
-          font-semibold uppercase leading-[1]"
+              className="mb-6 text-[30px] lg:text-[40px] font-secondary 
+            font-semibold uppercase leading-[1]"
             >
               <span className="text-white mr-4">I am a</span>
               <TypeAnimation
                 sequence={[
                   "Web Dev",
-                  2000,
+                  1000,
                   "Mobile Dev",
-                  2000,
+                  1000,
                   "Paralegal Adviser",
-                  2000,
+                  1000,
                 ]}
                 speed={50}
-                className="text-accent"
+                className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-600"
                 wrapper="span"
                 repeat={Infinity}
               />
@@ -53,10 +51,10 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-8 max-w-lg mx-auto lg:mx-0"
+              className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl"
             >
               {
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                "A front-end web developer and entrepreneur, I am a results-driven professional with a solid history in developing, testing, and maintaining web projects. I have a proven track record in effectively overseeing copyright issues across all company projects, guaranteeing the protection of intellectual property and adherence to regulations."
               }
             </motion.p>
             <motion.div
@@ -66,27 +64,16 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
             >
-              <button className="btn btn-lg">Contact me</button>
-              <a href="http://www.google.com" className="text-gradient btn-link">
-                My Portfolio
-              </a>
-            </motion.div>
-            <motion.div
-              variants={fadeIn("up", 0.7)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
-            >
-              <a href="https://github.com/simssgithub" target="new">
-                <FaGithub className="text-3xl"/>
-              </a>
-              <a href="https://www.linkedin.com/in/jay-bautista-bautista-aa8142b1/">
-                <FaLinkedin className="text-3xl"/>
-              </a>
-              <a href="https://twitter.com/jrbwebdiebin" target="new">
-                <FaSquareXTwitter className="text-3xl"/>
-              </a>
+              <button className="px-1 py-1 w-full sm:w-fit rounded-full btn btn-lg mt-3">
+                <span className="btn btn-lg">
+                  Hire me
+                </span>
+              </button>
+              <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-indigo-800 via-blue-500 to-teal-100 hover:bg-slate-500 text-white mt-3">
+                <span className="block bg-indigo-800 hover:bg-slate-800 rounded-full px-5 py-2">
+                  Download My CV
+                </span>
+              </button>
             </motion.div>
           </div>
           <motion.div
