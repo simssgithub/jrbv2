@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../assets/mypic.png";
+import Image from "../assets/doctor.jpg";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";

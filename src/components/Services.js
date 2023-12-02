@@ -20,12 +20,12 @@ const services = [
   {
     name: "Legal Works",
     description:
-      "Interact with materials concerning legal compliance, contract formation, and company policy in the legal realm.",
+      "Interact with materials concerning legal compliance, contract formation, and company policy.",
   },
   {
     name: "Side Hustle",
     description:
-      "Offering support for MBA students software theses through system development, excluding documentation services. This work is exclusively conducted during my free time.",
+      "Offering support for MBA students software theses through system development.",
   },
 ];
 
@@ -60,16 +60,17 @@ const Services = () => {
           >
             <h2 className="h2 text-accent mb-6">What I Do</h2>
             <h3 className="h3 max-w-[455px] mb-16">
-              {"I'm a Web and Mobile Developer also a Paralegal Adviser"}
+              I live in a saying that &quot; Jack of all trades, master
+              of none, <br/>but I find {"it's"} often more advantageous than being a
+              master of one&quot;
             </h3>
-            <button className="btn btn-sm">See my work</button>
           </motion.div>
           <motion.div
             variants={fadeIn("left", 0.4)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1"
+            className="flex flex-col flex-1 items-end"
           >
             <div
               variants={fadeIn("left", 0.4)}
