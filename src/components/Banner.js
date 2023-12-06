@@ -1,10 +1,20 @@
 import React from "react";
 import Image from "../assets/doctor.jpg";
+import myCV from "../assets/jrb.pdf";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
 const Banner = () => {
+
+  function handleDownloadClick() {
+    const link = document.createElement('a');
+    link.href = myCV; // Using the imported file path
+    link.setAttribute('download', 'myCV.pdf'); // Set the desired filename here
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
   return (
     <section
       className="min-h-[85vh] lg:min-h-[78vh] flex items-center"
@@ -33,9 +43,9 @@ const Banner = () => {
               <span className="text-white mr-4">I am a</span>
               <TypeAnimation
                 sequence={[
-                  "Web Dev",
+                  "Web Developer",
                   1000,
-                  "Mobile Dev",
+                  "Mobile Developer",
                   1000,
                   "Paralegal Adviser",
                   1000,
@@ -64,14 +74,14 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
             >
-              <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-indigo-800 via-blue-500 to-teal-100 hover:bg-slate-500 text-white mt-3">
+              {/* <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-indigo-800 via-blue-500 to-teal-100 hover:bg-slate-500 text-white mt-3">
                 <span className="block bg-indigo-800 hover:bg-teal-500 rounded-full px-5 py-2">
                   Hire me
                 </span>
-              </button>
+              </button> */}
               <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-indigo-800 via-blue-500 to-teal-100 hover:bg-slate-500 text-white mt-3">
-                <span className="block bg-indigo-800 hover:bg-slate-800 rounded-full px-5 py-2">
-                  Download My CV
+                <span className="block bg-indigo-800 hover:bg-teal-500 rounded-full px-5 py-2" onClick={handleDownloadClick}>
+                Download my Curriculum Vitae
                 </span>
               </button>
             </motion.div>
@@ -80,9 +90,9 @@ const Banner = () => {
             variants={fadeIn("down", 0.5)}
             initial="hidden"
             whileInView={"show"}
-            className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]"
+            className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px] rounded-lg shadow-lg"
           >
-            <img src={Image} alt="" />
+            <img src={Image} alt="" className="rounded-lg" />
           </motion.div>
         </div>
       </div>

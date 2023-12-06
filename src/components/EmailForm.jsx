@@ -10,9 +10,9 @@ function EmailForm () {
     const handleSubmit = (e) =>{
         e.preventDefault();
         //emailjs serviceID, templateId, PublicKey
-        const serviceId = 'service_vh5u7bg';
-        const templateId = 'template_3zy73ry';
-        const publickey ='pnMw0Hi5N8kv9SQxn';
+        const serviceId = process.env.serviceId;
+        const templateId = process.env.templateId;
+        const publickey = process.env.publickey;
 
         //new object template params
         const templateParams = {

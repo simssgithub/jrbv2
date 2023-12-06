@@ -1,7 +1,7 @@
 import React from "react";
-import Img1 from "../assets/portfolio-img1.png";
-import Img2 from "../assets/portfolio-img2.png";
-import Img3 from "../assets/portfolio-img3.png";
+import Img1 from "../assets/imgwork/work1.png";
+import Img2 from "../assets/imgwork/work2.png";
+import Img3 from "../assets/imgwork/work3.png";
 import { fadeIn } from "../variants";
 import { motion } from "framer-motion";
 
@@ -26,14 +26,22 @@ const Work = () => {
             {/* text */}
             <div>
               <h2 className="h2 leading-tight text-accent">
-                My Latest <br />
-                Work.
+                My Latest Work
               </h2>
               <p className="max-w-sm mb-16">
-                rem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's 
+                {"This is are the latest projects that i been doing including this portfolio"}
+                <lu>
+                  <li>
+                  <a href="https://c72138-2.myshopify.com/collections/all" alt="" target="new" className="text-gradient">Shopify project {"Krei's Pizza"}</a>
+                  </li>
+                  <li>
+                  <a href="http://management.luceglobal.com.ph" alt="" target="new"  className="text-gradient">SIMSS Go-Negosyo WebApp</a>
+                  </li>
+                  <li>
+                  <a href="http://www.luceglobal.com.ph" alt="" target="new"  className="text-gradient">Luce Global EHSSI Website</a>
+                  </li>
+                </lu>
               </p>
-              <button className="btn btn-sm">View all projects</button>
             </div>
             {/* image */}
             <div
@@ -56,14 +64,14 @@ const Work = () => {
                 className="absolute -bottom-full left-12 
               group-hover:bottom-24 transition-all duration-500 z-50"
               >
-                <span className="text-gradient">UI/UX Design</span>
+                <span className="text-gradient">Shopify online Store</span>
               </div>
               {/* title */}
               <div
                 className="absolute -bottom-full left-12 
               group-hover:bottom-14 transition-all duration-700 z-50"
               >
-                <span className="text-3xl text-white">Project Title</span>
+                <span className="text-3xl text-white">{"Krei's Pizza"}</span>
               </div>
             </div>
           </motion.div>
@@ -98,14 +106,14 @@ const Work = () => {
                 className="absolute -bottom-full left-12 
               group-hover:bottom-24 transition-all duration-500 z-50"
               >
-                <span className="text-gradient">UI/UX Design</span>
+                <span className="text-gradient">SIMSS SaaS</span>
               </motion.div>
               {/* title */}
               <div
                 className="absolute -bottom-full left-12 
               group-hover:bottom-14 transition-all duration-700 z-50"
               >
-                <span className="text-3xl text-white">Project Title</span>
+                <span className="text-3xl text-white">SIMSS Go-Negosyo WebApp</span>
               </div>
             </motion.div>
             {/* image */}
@@ -137,14 +145,14 @@ const Work = () => {
                 className="absolute -bottom-full left-12 
               group-hover:bottom-24 transition-all duration-500 z-50"
               >
-                <span className="text-gradient">UI/UX Design</span>
+                <span className="text-gradient">Luce Global EHSSI </span>
               </motion.div>
               {/* title */}
               <div
                 className="absolute -bottom-full left-12 
               group-hover:bottom-14 transition-all duration-700 z-50"
               >
-                <span className="text-3xl text-white">Project Title</span>
+                <span className="text-3xl text-white">Company Website</span>
               </div>
             </motion.div>
           </div>

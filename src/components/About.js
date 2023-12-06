@@ -8,15 +8,45 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Nextjs</li>
-        <li>React</li>
-        <li>JavaScript</li>
-        <li>C Sharp</li>
-        <li>Microsoft SQL Server</li>
-        <li>Microsoft Azure</li>
-        <li>Shopify</li>
-      </ul>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div className="border border-gray-300 rounded p-4">
+    <h2 className="text-lg font-bold mb-2">Web Development</h2>
+    <p>
+      NextJS, ReactJS, JavaScript, Bootstrap, HTML, CSS, GitHub
+    </p>
+  </div>
+  <div className="border border-gray-300 rounded p-4">
+    <h2 className="text-lg font-bold mb-2">Backend Development and Frameworks</h2>
+    <p>
+      .NET Blazor, C#, Management of MSSQL and Azure Database
+    </p>
+  </div>
+  <div className="border border-gray-300 rounded p-4">
+    <h2 className="text-lg font-bold mb-2">Mobile App Development</h2>
+    <p>
+      Android using Android Studio
+    </p>
+  </div>
+  <div className="border border-gray-300 rounded p-4">
+    <h2 className="text-lg font-bold mb-2">Content Management Systems (CMS)</h2>
+    <p>
+      Shopify, WordPress, Joomla
+    </p>
+  </div>
+  <div className="border border-gray-300 rounded p-4">
+    <h2 className="text-lg font-bold mb-2">Server and System Administration</h2>
+    <p>
+      Installation, Configuration and Management of Microsoft Window Server and Active Directory
+    </p>
+  </div>
+  <div className="border border-gray-300 rounded p-4">
+    <h2 className="text-lg font-bold mb-2">Hosting and Deployment</h2>
+    <p>
+      Netlify (deployment and hosting), Smarterasp.net (hosting provider)
+    </p>
+  </div>
+</div>
+
     ),
   },
   {
@@ -24,11 +54,18 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>
-          Doctor of Philosophy in Business Administration {"(Honoris Causa)"}
-        </li>
         <li>Juris Doctor</li>
         <li>BS Information Technology</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Award",
+    id: "award",
+    content: (
+      <ul className="list-disc pl-2">
+        Doctor of Philosophy in Business Administration {"(Honoris Causa)"}<br/>
+        Awarded by Asian University International {"(AUI-MUN)"}. 
       </ul>
     ),
   },
